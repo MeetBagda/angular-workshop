@@ -1,0 +1,10 @@
+div{
+    height: 40px;
+    color: #fff;
+    background-color: #888;
+    font-size: 19px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

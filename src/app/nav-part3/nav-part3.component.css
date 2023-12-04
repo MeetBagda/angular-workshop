@@ -1,0 +1,15 @@
+#nav-part3{
+    height: 40px;
+    color: #000;
+    background-color: #fff;
+    font-size: 19px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    float: right;
+}
+#nav-part3>a{
+    color: #000;
+    text-decoration: none;
+}

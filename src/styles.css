@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "General Sans";
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+/* styles.css or your global styles file */
+
+#first-page {
+  position: relative;
+}
+
+app-hero,
+app-navbar {
+  display: block;
+}
+
+app-hero {
+  height: 100vh;
+  /* Add other styles for the hero component, such as background, etc. */
+}
+
+app-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Use a higher z-index to ensure the navbar is above the hero */
+  /* Add other styles for the navbar component */
+}
