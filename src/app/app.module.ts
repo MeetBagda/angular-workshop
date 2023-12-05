@@ -11,6 +11,7 @@ import { NavPart3Component } from './nav-part3/nav-part3.component';
 import { NavSectionComponent } from './nav-section/nav-section.component';
 import { FirstpageComponent } from './firstpage/firstpage.component';
 import { HeroComponent } from './hero/hero.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeroComponent } from './hero/hero.component';
     NavPart3Component,
     NavSectionComponent,
     FirstpageComponent,
-    HeroComponent
+    HeroComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

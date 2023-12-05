@@ -23,14 +23,12 @@ app-navbar {
 
 app-hero {
   height: 100vh;
-  /* Add other styles for the hero component, such as background, etc. */
-}
+ }
 
 app-navbar {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Use a higher z-index to ensure the navbar is above the hero */
-  /* Add other styles for the navbar component */
+  z-index: 1000;
 }

@@ -1,0 +1,29 @@
+
+#about-page{
+    background-color: #fff;
+    color: #000;
+}
+#uni-heading{
+    width: 40%;
+    height: 4vw;
+    margin: 3vw 2vw;
+    padding-left: 4vw;
+    background-image: linear-gradient(to right,#D11D3D,#2E2F4C);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    border-radius: 10px;
+}
+#about-uni{
+    margin-top: 4vw;
+}
+.headings{
+    padding-left: 4vw;
+    color: #D11D3D;
+}
+p{
+    width: 75%;
+    padding: 10px 20px;
+}
