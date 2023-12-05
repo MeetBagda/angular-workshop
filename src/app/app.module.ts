@@ -12,6 +12,9 @@ import { NavSectionComponent } from './nav-section/nav-section.component';
 import { FirstpageComponent } from './firstpage/firstpage.component';
 import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
+import { FacultyComponent } from './faculty/faculty.component';
+import { FormsModule } from '@angular/forms';
+import { ApiComponent } from './api/api.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { AboutComponent } from './about/about.component';
     NavSectionComponent,
     FirstpageComponent,
     HeroComponent,
-    AboutComponent
+    AboutComponent,
+    FacultyComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

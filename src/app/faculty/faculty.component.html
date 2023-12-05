@@ -1,0 +1,14 @@
+<input type="text" [(ngModel)]="tempStdName">
+<button *ngIf="idToUpdate === -1" (click)="addStudent()">Add</button>
+<button *ngIf="idToUpdate > -1" (click)="editStudent()">Edit</button>
+<table border="1px" width="40%">
+    <tr *ngFor="let student of students; let i = index">
+        <td>{{ student }}</td>
+        <td>
+            <button (click)="setForEdit(student, i)">Edit</button>
+        </td>
+        <td>
+            <button (click)="deleteStudent(i)">Delete</button>
+        </td>
+    </tr>
+</table>
