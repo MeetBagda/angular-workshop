@@ -1,0 +1,9 @@
+#heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#heading h1{
+    color: #C8203F;
+    text-transform: uppercase;
+}

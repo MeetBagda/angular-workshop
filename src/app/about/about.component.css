@@ -19,11 +19,17 @@
 #about-uni{
     margin-top: 4vw;
 }
-.headings{
+#home-router>a{
+    text-decoration: none;
+    color: #000;
     padding-left: 4vw;
+    font-size: 1.5vw;
+}
+.headings{
+    padding-left: 3vw;
     color: #D11D3D;
 }
 p{
     width: 75%;
-    padding: 10px 20px;
+    padding: 10px 3vw;
 }

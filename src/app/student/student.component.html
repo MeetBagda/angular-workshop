@@ -1,0 +1,50 @@
+<div id="student-page">
+  <div id="nav">
+    <app-crud-nav></app-crud-nav>
+  </div>
+  <div id="data">
+    <label for="">Enter RollNo : </label>
+    <input type="text" class="form-control" [(ngModel)] = "tempStudent.rollNo" />
+    <label for="">Enter Student Name : </label>
+    <input type="text" class="form-control" [(ngModel)] = "tempStudent.name" />
+    <label for="">Enter Age : </label>
+    <input type="text" class="form-control" [(ngModel)] = "tempStudent.age" />
+    <label for="">Enter Semester : </label>
+    <input type="text" class="form-control" [(ngModel)] = "tempStudent.sem" />
+
+    <button *ngIf="idToEdit === -1" class="btn btn-primary" (click)="addStudent()">Add</button>
+    <button *ngIf="idToEdit > -1" class="btn btn-success" (click)="editStudent()">Edit</button>
+
+    <table class="text-center table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <td class="text-start" colspan="3">
+            <input type="text" [(ngModel)]="searchText" />
+          </td>
+        </tr>
+      </thead>
+
+      <tbody *ngIf="searchText == ''">
+        <tr *ngFor="let stu of students; let i = index">
+          <td>{{ stu.rollNo }}</td>
+          <td>{{ stu.name }}</td>
+          <td>{{ stu.age }}</td>
+          <td>{{ stu.sem }}</td>
+          <td><button class="btn btn-warning" (click)="setForEdit(i)">Edit</button></td>
+          <td><button class="btn btn-danger" (click)="deleteStudent(i)">Delete</button></td>
+        </tr>
+      </tbody>
+
+      <tbody  *ngIf="searchText != ''">
+        <tr *ngFor="let stu of filteredStudents; let i = index">
+          <td>{{ stu.rollNO }}</td>
+          <td>{{ stu.name }}</td>
+          <td>{{ stu.age }}</td>
+          <td>{{ stu.sem }}</td>
+          <td><button class="btn btn-warning" (click)="setForEdit(i)">Edit</button></td>
+          <td><button class="btn btn-danger" (click)="deleteStudent(i)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

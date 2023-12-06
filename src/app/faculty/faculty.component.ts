@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class FacultyComponent {
   students = ['Meet', 'Ritesh', 'Het'];
+  filteredStudents = [''];
   tempStdName = '';
   idToUpdate = -1;
+  searchText = ''
 
   addStudent() {
     this.students.push(this.tempStdName);
@@ -17,18 +19,23 @@ export class FacultyComponent {
   }
 
   editStudent() {
-    // Assuming you want to update the student name at the specified index
       this.students[this.idToUpdate] = this.tempStdName;
       this.tempStdName = '';
       this.idToUpdate = -1;
   }
 
-  setForEdit(name: any, index: number) {
-    this.tempStdName = name;
+  setForEdit( index: number) {
+    this.tempStdName = this.students[index];
     this.idToUpdate = index;
    }
 
    deleteStudent(index: number) {
     this.students.splice(index, 1);
+   }
+
+   searchStudents(){
+    this.filteredStudents=this.students.filter((stu:string)=>{
+      return stu.indexOf(this.searchText)>-1;
+    })
    }
 }

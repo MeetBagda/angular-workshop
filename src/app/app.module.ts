@@ -14,8 +14,9 @@ import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { FormsModule } from '@angular/forms';
-import { ApiComponent } from './api/api.component';
-
+import { StudentComponent } from './student/student.component';
+import { CrudPageComponent } from './crud-page/crud-page.component';
+import { CrudNavComponent } from './crud-nav/crud-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,10 @@ import { ApiComponent } from './api/api.component';
     HeroComponent,
     AboutComponent,
     FacultyComponent,
-    ApiComponent
+    StudentComponent,
+    CrudPageComponent,
+    CrudNavComponent,
+   
   ],
   imports: [
     BrowserModule,
