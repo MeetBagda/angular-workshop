@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { StudentComponent } from './student/student.component';
 import { CrudPageComponent } from './crud-page/crud-page.component';
 import { CrudNavComponent } from './crud-nav/crud-nav.component';
+import { LaptopComponent } from './laptop/laptop.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +35,7 @@ import { CrudNavComponent } from './crud-nav/crud-nav.component';
     StudentComponent,
     CrudPageComponent,
     CrudNavComponent,
+    LaptopComponent,
    
   ],
   imports: [

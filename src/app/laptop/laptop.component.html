@@ -1,0 +1,51 @@
+<div id="student-page">
+    <div id="nav">
+      <app-crud-nav></app-crud-nav>
+    </div>
+    <div id="data">
+      <label for="">Enter Laptop Model : </label>
+      <input type="text" class="form-control" [(ngModel)] = "tempData.LaptopModelNo" />
+      <label for="">Enter Brand Name : </label>
+      <input type="text" class="form-control" [(ngModel)] = "tempData.BrandName" />
+      <label for="">Enter Laptop Name : </label>
+      <input type="text" class="form-control" [(ngModel)] = "tempData.LaptopModel" />
+      <label for="">Enter price : </label>
+      <input type="text" class="form-control" [(ngModel)] = "tempData.price" />
+  
+      <button *ngIf="idToEdit === -1" class="btn btn-primary" (click)="addData()">Add</button>
+      <button *ngIf="idToEdit > -1" class="btn btn-success" (click)="editData()">Edit</button>
+  
+      <table class="text-center table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <td class="text-start" colspan="3">
+              <input type="text" [(ngModel)]="searchText" />
+            </td>
+          </tr>
+        </thead>
+  
+        <tbody *ngIf="searchText == ''">
+          <tr *ngFor="let lap of laptops; let i = index">
+            <td>{{ lap.LaptopModelNo }}</td>
+            <td>{{ lap.BrandName }}</td>
+            <td>{{ lap.LaptopModel }}</td>
+            <td>{{ lap.price }}</td>
+            <td><button class="btn btn-success" (click)="setForEdit(i)">Edit</button></td>
+            <td><button class="btn btn-danger" (click)="deleteData(i)">Delete</button></td>
+          </tr>
+        </tbody>
+  
+        <tbody  *ngIf="searchText != ''">
+          <tr *ngFor="let lap of filteredData; let i = index">
+            <td>{{ lap.LaptopModelNo }}</td>
+            <td>{{ lap.BrandName }}</td>
+            <td>{{ lap.LaptopModel }}</td>
+            <td>{{ lap.price }}</td>
+            <td><button class="btn btn-warning" (click)="setForEdit(i)">Edit</button></td>
+            <td><button class="btn btn-danger" (click)="deleteData(i)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

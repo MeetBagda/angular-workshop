@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { StudentComponent } from './student/student.component';
 import { CrudPageComponent } from './crud-page/crud-page.component';
+import { LaptopComponent } from './laptop/laptop.component';
 
 const routes: Routes = [
   {path: '', component: FirstpageComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'data', component:CrudPageComponent},
   {path: 'faculty', component: FacultyComponent},
   {path: 'student', component: StudentComponent},
+  {path: 'laptop', component: LaptopComponent},
 ];
 
 @NgModule({
